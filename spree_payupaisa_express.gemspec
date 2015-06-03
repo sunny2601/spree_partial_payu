@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.required_ruby_version = '>= 1.9.3'
 
-  s.author       = 'Akhilesh Singh'
-  s.email        = 'meetdestiny@gmail.com'
+  s.author       = 'Shakti Singh'
+  s.email        = 'shakti@almssolutions.com'
   s.license      = %q{BSD-3}
 
   s.files        = `git ls-files`.split("\n")
