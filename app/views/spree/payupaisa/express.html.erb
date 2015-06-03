@@ -1,0 +1,40 @@
+<%= form_tag(@base_url, :method=>:post) do %>
+ <input type="hidden" name="key" value="<%= @merchant_key %>" />
+      <input type="hidden" name="hash" value="<%= @hash %>"/>
+      <input type="hidden" name="txnid" value="<%= @txnid %>" />
+      <input type="hidden" name="udf2" value="<%= @txnid %>" />
+          <input type="hidden" name="service_provider" value="payu_paisa" />
+      <table>
+        <tr>
+          <td>Amount: </td>
+          <td><input name="amount" value="<%= @amount %>" readonly/></td>
+          <td>First Name: </td>
+          <td><input name="firstname" id="firstname" value="<%= @firstname %>"  readonly/></td>
+        </tr>
+        <tr>
+          <td>Email: </td>
+          <td><input name="email" id="email" value="<%= @email %>" readonly /></td>
+          <td>Phone: </td>
+          <td><input name="phone" value="<%= @phone %>" readonly/></td>
+        </tr>
+        <tr>
+          <td>Product Info: </td>
+          <td colspan="3"><input name="productinfo" value="productinfo" size="64" readonly /></td>
+        </tr>
+        <tr>
+          <td>Success URI: </td>
+          <td colspan="3"><input name="surl" value="http://<%=Spree::Config[:site_url]%>/payupaisa/confirm?payment_method_id=<%=params[:payment_method_id]%>&authencity_token=<%=params[:authenticity_token]%>" size="64" readonly /></td>
+        </tr>
+        <tr>
+          <td>Failure URI: </td>
+          <td colspan="3"><input name="furl" value="http://<%=Spree::Config[:site_url]%>/payupaisa/cancel?authencity_token=<%=params[:authenticity_token]%>" size="64" readonly /></td>
+        </tr>
+      </table>
+     <%= submit_tag 'Proceed to payment' %> 
+<% end %>
+<script>
+ $(document).ready(function() {
+
+     // alert("hello"); 
+});
+</script>

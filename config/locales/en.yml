@@ -1,0 +1,16 @@
+---
+en:
+  spree:
+    payupaisa:
+      already_refunded: "This payment has been refunded and no further action can be taken on it."
+      transaction: "Payupaisa Transaction"
+      payer_id: "Payer ID"
+      transaction_id: "Transaction ID"
+      token: "Token"
+      refund: "Refund"
+      refund_amount: "Amount"
+      original_amount: "Original amount: %{amount}"
+      refund_successful: "Payupaisa refund successful"
+      refund_unsuccessful: "Payupaisa refund unsuccessful"
+      actions:
+        refund: "Refund"
