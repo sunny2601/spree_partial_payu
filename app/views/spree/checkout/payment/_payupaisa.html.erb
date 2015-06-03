@@ -1,5 +1,6 @@
-
-<%= link_to(image_tag("payu_money.png"), payupaisa_express_url(:payment_method_id => payment_method.id), :method => :post, :id => "payupaisa_button") %>
+<h4>For Full Payment : </h4><%= link_to(image_tag("payu_money.png"), payupaisa_express_url(:payment_method_id => payment_method.id), :method => :post, :id => "payupaisa_button") %>
+<h4>For Partial Payment : </h4>
+<%= link_to(image_tag("payu_money.png"), payupaisa_express_url(:payment_method_id => payment_method.id,:partial_paercentage=>true), :method => :post, :id => "payupaisa_button") %>
 
 <script>
   SpreePayupaisaExpress.paymentMethodID = "<%= payment_method.id %>"  
