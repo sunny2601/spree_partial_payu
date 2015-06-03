@@ -7,7 +7,7 @@ This is a PayUPaisa extension for spree. This is currently under development.
 
 1. Add this extension to your Gemfile with this line:
 
-        gem 'spree_payupaisa', :github => "meetdestiny/spree_payupaisa_express", :branch => "2-1-stable"
+        gem 'spree_partial_payu', :github => "sunny2601/spree_partial_payu"
 
 
 2. Install the gem using Bundler:
