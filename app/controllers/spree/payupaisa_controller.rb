@@ -130,7 +130,7 @@ module Spree
                                                                                          :zipcode  => params[:zipcode]
 
                                                                                      } ),
-                                   :amount => order.total,
+                                   :amount => params[:amount],
                                    :payment_method => payment_method
                                } )
         order.next
