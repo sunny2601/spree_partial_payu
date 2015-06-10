@@ -30,7 +30,8 @@
           <td colspan="3"> --><input type="hidden" name="furl" value="http://<%=Spree::Config[:site_url]%>/payupaisa/cancel?authencity_token=<%=params[:authenticity_token]%>" size="64" readonly /><!-- </td>
         </tr>
       </table> -->
-     <%#= submit_tag 'Proceed to payment' %> 
+     <%#= submit_tag 'Proceed to payment' %>
+     <%= image_tag("loading45.gif") %> 
 <% end %>
 <script>
   document.getElementById("payupaisaform").submit();
