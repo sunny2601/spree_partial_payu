@@ -5,6 +5,6 @@ Deface::Override.new(
   text: %q{
     <div data-hook="name" class="form-group">
         <%= label_tag :partial_percentage %><br>
-        <%= text_field :payment_method, :partial_percentage %>
+        <%= text_field :payment_method, :partial_percentage, :placeholder => "should be grater than 0" %>
       </div>
   })
