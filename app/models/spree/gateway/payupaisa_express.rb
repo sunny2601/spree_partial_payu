@@ -6,7 +6,7 @@ module Spree
     preference :server, :string, default: 'test'
     preference :solution, :string, default: 'Mark'
     preference :logourl, :string, default: ''
-    preference :partial_percentage, :integer, :presence => true, :default => 0
+    preference :partial_percentage, :integer, :presence => true, default: '0'
 
     def provider 
       puts preferred_merchantkey 
