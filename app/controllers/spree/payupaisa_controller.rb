@@ -47,8 +47,8 @@ module Spree
         @txnid = hash_calc('256',rndm)[0,20].to_s[2,20]
         @udf2 = @txnid
         hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10"
-        if params[:partial_percentage]
-          @amount = (current_order.total.to_f*payment_method.provider.partial_percentage/100).to_s
+        if payment_method.preferences[:partial_percentage]
+          @amount = (current_order.total.to_f*payment_method.preferences[:partial_percentage]/100).to_s
         else
           @amount = current_order.total.to_s
         end
