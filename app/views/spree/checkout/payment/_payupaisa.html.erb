@@ -1,5 +1,5 @@
 <h4>For Full Payment : </h4><%= link_to(image_tag("payu_money.png"), payupaisa_express_url(:payment_method_id => payment_method.id), :method => :post, :id => "payupaisa_button") %>
-<% if payment_method.preferences[:partial_percentage] > 0 %>
+<% if payment_method.preferences[:partial_percentage].to_i > 0 %>
 <h4>For Partial Payment : </h4>
 <%= link_to(image_tag("payu_money.png"), payupaisa_express_url(:payment_method_id => payment_method.id,:partial_percentage=>true), :method => :post, :id => "payupaisa_button") %>
 <% end %>
